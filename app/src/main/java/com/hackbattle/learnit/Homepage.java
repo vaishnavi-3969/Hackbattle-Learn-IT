@@ -51,24 +51,23 @@ public class Homepage extends AppCompatActivity {
             }
         });
 
+        List<Course> allcourses = new ArrayList<>();
+        allcourses.add(new Course("Web Designing"));
+        allcourses.add(new Course("Augmented Reality"));
+        allcourses.add(new Course("Video Editing"));
+        allcourses.add(new Course("Web3 Engineering"));
+        allcourses.add(new Course("UX Design"));
+        allcourses.add(new Course("Devops"));
+        allcourses.add(new Course("Java Full Stack"));
+        allcourses.add(new Course("DevOps"));
+        allcourses.add(new Course("Data Science"));
+        allcourses.add(new Course("Cloud Computing"));
+        allcourses.add(new Course("Embedded Systems"));
+        allcourses.add(new Course("Web Development"));
+        allcourses.add(new Course("Data Analytics"));
+        allcourses.add(new Course("Digital Marketing"));
 
-        List<Course> courses = new ArrayList<>();
-        courses.add(new Course("Web Designing"));
-        courses.add(new Course("Augmented Reality"));
-        courses.add(new Course("Video Editing"));
-        courses.add(new Course("Web3 Engineering"));
-        courses.add(new Course("UX Design"));
-        courses.add(new Course("Devops"));
-        courses.add(new Course("Java Full Stack"));
-        courses.add(new Course("DevOps"));
-        courses.add(new Course("Data Science"));
-        courses.add(new Course("Cloud Computing"));
-        courses.add(new Course("Embedded Systems"));
-        courses.add(new Course("Web Development"));
-        courses.add(new Course("Data Analytics"));
-        courses.add(new Course("Digital Marketing"));
-
-        CourseAdapter adapter = new CourseAdapter(courses);
+        CourseAdapter adapter = new CourseAdapter(allcourses);
         coursesRecyclerView.setAdapter(adapter);
 
         StreakDialog sd = new StreakDialog(this);
