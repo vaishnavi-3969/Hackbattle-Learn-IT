@@ -4,6 +4,9 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import java.util.*;
 
+import android.annotation.SuppressLint;
+import android.app.ProgressDialog;
+import android.media.Image;
 import android.util.Log;
 import android.widget.*;
 import android.content.*;
@@ -20,64 +23,61 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
 public class RegistrationActivity extends AppCompatActivity {
+    private ProgressBar progressBar;
+
     EditText username, email, password;
+    ImageView register, login;
     static final String TAG = "RegistrationActivity";
     FirebaseAuth mAuth;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registration);
+        username = findViewById(R.id.username);
+        email = findViewById(R.id.email);
+        password = findViewById(R.id.password);
+        register = (ImageView)findViewById(R.id.registerBtn);
+        login = (ImageView)findViewById(R.id.loginBtn);
         mAuth = FirebaseAuth.getInstance();
-         username = findViewById(R.id.username);
-         email = findViewById(R.id.email);
-         password = findViewById(R.id.password);
-        Button register = (Button) findViewById(R.id.registerBtn);
-        Button login = (Button) findViewById(R.id.loginBtn);
-
-
         register.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String _name = String.valueOf(username.getText());
-                String _email = String.valueOf(email.getText());
-                String _password = String.valueOf(password.getText());
-                if (TextUtils.isEmpty(_name) || TextUtils.isEmpty(_email) || TextUtils.isEmpty(_password)) {
-                    username.setError("Enter username");
-                    email.setError("Enter email");
-                    password.setError("Enter password");
-                    Toast.makeText(RegistrationActivity.this, "*All fields are mandatory", Toast.LENGTH_SHORT).show();
-                }else {
-                    Toast.makeText(RegistrationActivity.this, "Registration Successful", Toast.LENGTH_SHORT).show();
-                    mAuth.createUserWithEmailAndPassword(_email, _password)
-                            .addOnCompleteListener(RegistrationActivity.this, new OnCompleteListener<AuthResult>() {
-                                @Override
-                                public void onComplete(@NonNull Task<AuthResult> task) {
-                                    if (task.isSuccessful()) {
-                                        // Sign in success, update UI with the signed-in user's information
-                                        Log.d(TAG, "createUserWithEmail:success");
-                                        FirebaseUser user = mAuth.getCurrentUser();
-                                        Toast.makeText(RegistrationActivity.this, "Authentication success.",
-                                                Toast.LENGTH_SHORT).show();
-                                        Intent intent = new Intent(RegistrationActivity.this, Homepage.class);
-                                        startActivity(intent);
-                                    } else {
-                                        // If sign in fails, display a message to the user.
-                                        Log.w(TAG, "createUserWithEmail:failure", task.getException());
-                                        Toast.makeText(RegistrationActivity.this, "Authentication failed.",
-                                                Toast.LENGTH_SHORT).show();
-                                    }
-
-                                    // ...
-                                }
-                            });
+                String emailText = email.getText().toString();
+                String passwordText = password.getText().toString();
+//
+                if (TextUtils.isEmpty(emailText)) {
+                    Toast.makeText(getApplicationContext(), "Please enter email...", Toast.LENGTH_LONG).show();
+                    return;
                 }
-            }
-            });
+                if (TextUtils.isEmpty(passwordText)) {
+                    Toast.makeText(getApplicationContext(), "Please enter password!", Toast.LENGTH_LONG).show();
+                    return;
+                }
 
+                mAuth.createUserWithEmailAndPassword(emailText, passwordText)
+                        .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                            @Override
+                            public void onComplete(@NonNull Task<AuthResult> task) {
+                                if (task.isSuccessful()) {
+                                    Toast.makeText(getApplicationContext(), "Registration successful!", Toast.LENGTH_LONG).show();
+//                                    progressBar.setVisibility(View.GONE);
+                                    Intent intent = new Intent(RegistrationActivity.this, Homepage.class);
+                                    startActivity(intent);
+                                }
+                                else {
+                                    Toast.makeText(getApplicationContext(), "Registration failed! Please try again later", Toast.LENGTH_LONG).show();
+                                    progressBar.setVisibility(View.GONE);
+                                }
+                            }
+                        });
+            }
+        });
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(RegistrationActivity.this, LoginActivity.class);
+                Toast.makeText(RegistrationActivity.this, "Switching to Login...", Toast.LENGTH_SHORT).show();
                 startActivity(intent);
             }
         });
