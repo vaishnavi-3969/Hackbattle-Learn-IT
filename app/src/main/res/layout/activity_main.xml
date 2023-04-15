@@ -25,6 +25,7 @@
         android:contentDescription="Teacher"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.509"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.879"
@@ -33,10 +34,10 @@
 
     <TextView
         android:id="@+id/textView6"
-        android:layout_width="106dp"
-        android:layout_height="29dp"
-        android:fontFamily="@font/adamina"
-        android:text="Teacher"
+        android:layout_width="183dp"
+        android:layout_height="66dp"
+        android:fontFamily="@font/delius_swash_caps"
+        android:text="Senior Pirate (Teacher)"
         android:textAlignment="center"
         android:textColor="#000000"
         android:textSize="24sp"
@@ -50,10 +51,10 @@
 
     <TextView
         android:id="@+id/textView5"
-        android:layout_width="117dp"
-        android:layout_height="40dp"
-        android:fontFamily="@font/adamina"
-        android:text="Student"
+        android:layout_width="197dp"
+        android:layout_height="59dp"
+        android:fontFamily="@font/delius_swash_caps"
+        android:text="Junior Pirate (Student)"
         android:textAlignment="center"
         android:textColor="#000000"
         android:textSize="24sp"
@@ -69,7 +70,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="32dp"
-        android:fontFamily="@font/adamina"
+        android:fontFamily="@font/delius_swash_caps"
         android:text="I'm a......."
         android:textSize="20sp"
         android:textStyle="bold"
@@ -77,26 +78,26 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.992" />
+        app:layout_constraintVertical_bias="1.0" />
 
     <TextView
         android:id="@+id/textView9"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="307dp"
+        android:layout_height="100dp"
         android:layout_marginBottom="32dp"
-        android:fontFamily="@font/adamina"
-        android:text="Learn IT.."
+        android:fontFamily="@font/delius_swash_caps"
+        android:text="Welcome to the Learn-IT wonderland. Join our pirate crew"
         android:textAlignment="center"
-        android:textAllCaps="true"
+        android:textAllCaps="false"
         android:textColor="#E91E63"
-        android:textSize="48sp"
+        android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/studentBtn"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.807" />
+        app:layout_constraintVertical_bias="0.846"
+        tools:text="Welcome to the Learn-IT wonderland. Join our pirate crew" />
 
     <ImageView
         android:id="@+id/imageView3"
