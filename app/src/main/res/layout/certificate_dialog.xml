@@ -14,16 +14,19 @@
         android:background="@color/white"
         android:fontFamily="@font/delius_swash_caps"
         android:gravity="center"
-        android:text="Congratulations, for getting streak for logging in today. Key rolling...."
+        android:text="Mission Accomplished!"
         android:textColor="#322B2B"
         android:textSize="34sp"
         android:textStyle="bold" />
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="274dp"
-        android:layout_height="98dp"
-        app:srcCompat="@drawable/fire" />
+
+    <VideoView
+        android:id="@+id/videoView"
+        android:layout_width="match_parent"
+        android:layout_height="115dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"

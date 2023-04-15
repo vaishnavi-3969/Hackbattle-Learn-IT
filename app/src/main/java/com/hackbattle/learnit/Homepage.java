@@ -9,6 +9,7 @@ import android.os.Bundle;
 import com.hackbattle.learnit.adapter.CourseAdapter;
 import com.hackbattle.learnit.model.Course;
 import com.hackbattle.learnit.model.RewardDialog;
+import com.hackbattle.learnit.model.StreakDialog;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -24,8 +25,9 @@ public class Homepage extends AppCompatActivity {
 
         coursesRecyclerView = findViewById(R.id.course_recycler);
         coursesRecyclerView.setLayoutManager(new LinearLayoutManager(this));
-        RewardDialog dialog = new RewardDialog(this);
-        dialog.show();
+//        RewardDialog dialog = new RewardDialog(this);
+//
+//        dialog.show();
 
         List<Course> courses = new ArrayList<>();
         courses.add(new Course("UX Design"));
@@ -38,5 +40,8 @@ public class Homepage extends AppCompatActivity {
         courses.add(new Course("Web Development"));
         CourseAdapter adapter = new CourseAdapter(courses);
         coursesRecyclerView.setAdapter(adapter);
+
+        StreakDialog sd = new StreakDialog(this);
+        sd.show();
     }
 }

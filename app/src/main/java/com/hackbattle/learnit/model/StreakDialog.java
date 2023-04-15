@@ -18,7 +18,7 @@ public class StreakDialog extends Dialog {
 
         setCancelable(false);
         setCanceledOnTouchOutside(false);
-        getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        getWindow().setBackgroundDrawable(new ColorDrawable(Color.WHITE));
 
         @SuppressLint({"MissingInflatedId", "LocalSuppress"}) ImageView okButton = (ImageView) findViewById(R.id.reward_image);
         okButton.setOnClickListener(new View.OnClickListener() {
