@@ -8,6 +8,7 @@ import android.os.Bundle;
 
 import com.hackbattle.learnit.adapter.CourseAdapter;
 import com.hackbattle.learnit.model.Course;
+import com.hackbattle.learnit.model.RewardDialog;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -23,6 +24,8 @@ public class Homepage extends AppCompatActivity {
 
         coursesRecyclerView = findViewById(R.id.course_recycler);
         coursesRecyclerView.setLayoutManager(new LinearLayoutManager(this));
+        RewardDialog dialog = new RewardDialog(this);
+        dialog.show();
 
         List<Course> courses = new ArrayList<>();
         courses.add(new Course("UX Design"));
