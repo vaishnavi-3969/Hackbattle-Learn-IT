@@ -11,8 +11,6 @@
         android:layout_width="94dp"
         android:layout_height="53dp"
         app:layout_constraintBottom_toTopOf="@+id/hi"
-        app:layout_constraintEnd_toStartOf="@+id/imageView4"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.115"
@@ -41,23 +39,13 @@
         android:fontFamily="@font/delius_swash_caps"
         android:text="Welcome to the Learn It wonderland. Let's explore the different course island with your telescope"
         android:textColor="#9C27B0"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.453"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.182" />
-
-    <ImageView
-        android:id="@+id/imageView4"
-        android:layout_width="84dp"
-        android:layout_height="68dp"
-        android:layout_marginEnd="8dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/pirate" />
 
     <EditText
         android:id="@+id/seachBar"
@@ -122,4 +110,26 @@
         app:layout_constraintTop_toBottomOf="@+id/seeAll2"
         app:layout_constraintVertical_bias="0.033"
         tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/profile"
+        android:layout_width="102dp"
+        android:layout_height="102dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/gradient_btn" />
+
+    <ImageView
+        android:id="@+id/imageView14"
+        android:layout_width="103dp"
+        android:layout_height="70dp"
+        app:layout_constraintBottom_toBottomOf="@+id/profile"
+        app:layout_constraintEnd_toEndOf="@+id/profile"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/pirate" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

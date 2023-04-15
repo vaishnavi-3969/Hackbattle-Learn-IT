@@ -4,7 +4,12 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageView;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import com.hackbattle.learnit.adapter.CourseAdapter;
 import com.hackbattle.learnit.model.Course;
@@ -17,6 +22,8 @@ import java.util.List;
 
 public class Homepage extends AppCompatActivity {
     RecyclerView coursesRecyclerView;
+    ImageView profileImage;
+    TextView seeall;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,11 +32,31 @@ public class Homepage extends AppCompatActivity {
 
         coursesRecyclerView = findViewById(R.id.course_recycler);
         coursesRecyclerView.setLayoutManager(new LinearLayoutManager(this));
-//        RewardDialog dialog = new RewardDialog(this);
-//
-//        dialog.show();
+        profileImage = (ImageView) findViewById(R.id.profile);
+        seeall = findViewById(R.id.seeAll);
+
+        seeall.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Homepage.this, AllCourses.class);
+                startActivity(intent);
+                Toast.makeText(Homepage.this, "Retrieving all courses list....", Toast.LENGTH_SHORT).show();
+            }
+        });
+        profileImage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Homepage.this, ProfileActivity.class);
+                startActivity(intent);
+            }
+        });
+
 
         List<Course> courses = new ArrayList<>();
+        courses.add(new Course("Web Designing"));
+        courses.add(new Course("Augmented Reality"));
+        courses.add(new Course("Video Editing"));
+        courses.add(new Course("Web3 Engineering"));
         courses.add(new Course("UX Design"));
         courses.add(new Course("Devops"));
         courses.add(new Course("Java Full Stack"));
@@ -38,6 +65,9 @@ public class Homepage extends AppCompatActivity {
         courses.add(new Course("Cloud Computing"));
         courses.add(new Course("Embedded Systems"));
         courses.add(new Course("Web Development"));
+        courses.add(new Course("Data Analytics"));
+        courses.add(new Course("Digital Marketing"));
+
         CourseAdapter adapter = new CourseAdapter(courses);
         coursesRecyclerView.setAdapter(adapter);
 
