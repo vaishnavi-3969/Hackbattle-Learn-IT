@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="200dp">
+
+    <LinearLayout
+        android:layout_width="478dp"
+        android:layout_height="207dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.06"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:id="@+id/course_name"
+            android:layout_width="406dp"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@android:drawable/ic_menu_more"
+            android:fontFamily="@font/delius_swash_caps"
+            android:text="coursename"
+            android:textAlignment="viewStart"
+            android:textColor="#4CAF50"
+            android:textSize="34sp"
+            android:textStyle="bold"
+            tools:ignore="MissingConstraints" />
+
+        <LinearLayout
+            android:layout_width="351dp"
+            android:layout_height="118dp"
+            android:layout_margin="5dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/course3"
+                android:layout_width="75dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/lighthouse" />
+
+            <ImageView
+                android:id="@+id/course4"
+                android:layout_width="75dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/lighthouse" />
+
+            <ImageView
+                android:id="@+id/course5"
+                android:layout_width="75dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/lighthouse" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="359dp"
+            android:layout_height="42dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView11"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:fontFamily="@font/delius_swash_caps"
+                android:text="Milestone-1"
+                android:textAlignment="center"
+                android:textColor="#9C27B0"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView13"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/delius_swash_caps"
+                android:text="Milestone-2"
+                android:textAlignment="center"
+                android:textColor="#9C27B0"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/delius_swash_caps"
+                android:text="Milestone-3"
+                android:textAlignment="center"
+                android:textColor="#9C27B0"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
