@@ -4,10 +4,14 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.app.AlertDialog;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -24,6 +28,7 @@ public class Homepage extends AppCompatActivity {
     RecyclerView coursesRecyclerView;
     ImageView profileImage;
     TextView seeall;
+    ImageView sidebarButton;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,7 +39,7 @@ public class Homepage extends AppCompatActivity {
         coursesRecyclerView.setLayoutManager(new LinearLayoutManager(this));
         profileImage = (ImageView) findViewById(R.id.profile);
         seeall = findViewById(R.id.seeAll);
-
+        sidebarButton = (ImageView) findViewById(R.id.sidebar);
         seeall.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -43,6 +48,8 @@ public class Homepage extends AppCompatActivity {
                 Toast.makeText(Homepage.this, "Retrieving all courses list....", Toast.LENGTH_SHORT).show();
             }
         });
+
+
         profileImage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -72,5 +79,23 @@ public class Homepage extends AppCompatActivity {
 
         StreakDialog sd = new StreakDialog(this);
         sd.show();
+        sidebarButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Homepage.this, Leaderboard.class);
+                startActivity(intent);
+            }
+        });
+
     }
+
+
+//    public void onSidebarButtonClick(View view) {
+//        LinearLayout sidebarLayout = findViewById(R.id.sidebar_layout);
+//        if (sidebarLayout.getVisibility() == View.VISIBLE) {
+//            sidebarLayout.setVisibility(View.GONE);
+//        } else {
+//            sidebarLayout.setVisibility(View.VISIBLE);
+//        }
+//    }
 }

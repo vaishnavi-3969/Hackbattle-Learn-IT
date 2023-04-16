@@ -13,6 +13,9 @@
         android:theme="@style/Theme.LearnIT"
         tools:targetApi="31">
         <activity
+            android:name=".Leaderboard"
+            android:exported="false" />
+        <activity
             android:name=".AllCourses"
             android:exported="false" />
         <activity

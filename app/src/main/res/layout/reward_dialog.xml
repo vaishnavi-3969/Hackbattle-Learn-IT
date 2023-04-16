@@ -14,7 +14,7 @@
         android:background="@color/white"
         android:fontFamily="@font/delius_swash_caps"
         android:gravity="center"
-        android:text="Congratulations, you won Novice Badge by getting started. Key Exploring...."
+        android:text="Congratulations, you won Novice Badge by getting started. Keep Exploring...."
         android:textColor="#322B2B"
         android:textSize="34sp"
         android:textStyle="bold" />

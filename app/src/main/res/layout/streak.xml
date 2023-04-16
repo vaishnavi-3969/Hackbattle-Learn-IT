@@ -14,7 +14,7 @@
         android:background="@color/white"
         android:fontFamily="@font/delius_swash_caps"
         android:gravity="center"
-        android:text="Congratulations, for getting streak for logging in today. Key rolling...."
+        android:text="Congratulations, for getting streak for logging in today. Keep rolling...."
         android:textColor="#322B2B"
         android:textSize="34sp"
         android:textStyle="bold" />

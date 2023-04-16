@@ -14,7 +14,7 @@
         android:background="@color/white"
         android:fontFamily="@font/delius_swash_caps"
         android:gravity="center"
-        android:text="Mission Accomplished!"
+        android:text="Mission Accomplished! You found a new Island and now it's yours...Cheers..."
         android:textColor="#322B2B"
         android:textSize="34sp"
         android:textStyle="bold" />

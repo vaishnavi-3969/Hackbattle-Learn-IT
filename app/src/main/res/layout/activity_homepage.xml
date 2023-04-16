@@ -6,8 +6,9 @@
     android:layout_height="match_parent"
     tools:context=".Homepage">
 
+
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/sidebar"
         android:layout_width="94dp"
         android:layout_height="53dp"
         app:layout_constraintBottom_toTopOf="@+id/hi"
@@ -131,5 +132,4 @@
         app:layout_constraintEnd_toEndOf="@+id/profile"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/pirate" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -86,30 +86,19 @@ claimBtn.setOnClickListener(new View.OnClickListener() {
             }
         });
 
-        // Get the VideoView and set its media controller
         videoView = view.findViewById(R.id.videoView);
         MediaController mediaController = new MediaController(getContext());
         mediaController.setAnchorView(videoView);
         videoView.setMediaController(mediaController);
-
-        // Set the video file to play
         String videoPath = "android.resource://" + getContext().getPackageName() + "/" + R.raw.pirateflag;
         Uri videoUri = Uri.parse(videoPath);
         videoView.setVideoURI(videoUri);
-
-        // Set a listener to play the video when the dialog is shown
-        setOnShowListener(dialog -> {
-            videoView.start();
-        });
+        videoView.start();
         videoView.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
             @Override
             public void onPrepared(MediaPlayer mp) {
                 mp.setLooping(true);
             }
-        });
-        // Set a listener to stop the video when the dialog is dismissed
-        setOnDismissListener(dialog -> {
-            videoView.stopPlayback();
         });
     }
 }

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:id="@+id/profile"
+        android:title="Profile Update"
+        android:icon="@drawable/person"
+        />
+    <item android:id="@+id/contactus"
+        android:title="Contact Us"
+        android:icon="@drawable/email"
+        />
+    <item android:id="@+id/notfication"
+        android:title="Notification"
+        android:icon="@drawable/key"
+        />
+    <item android:id="@+id/mybadges"
+        android:title="My Badges"
+        android:icon="@drawable/badge"
+        />
+</menu>
