@@ -5,7 +5,7 @@
  </p>
  </div>
 
-<div>
+<div align='center'>
 <h1>Screenshots:</h1>
 <img src = "https://user-images.githubusercontent.com/80088403/232290362-f74aab0f-f4be-4e55-90c1-6bd94c968a3b.jpg" height=500px width = 200px/>
 <img src = "https://user-images.githubusercontent.com/80088403/232290359-1ab22f5a-7a03-4219-a591-0bedebbedadf.jpg" height=500px width = 200px/>
