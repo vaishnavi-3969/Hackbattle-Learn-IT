@@ -1,6 +1,6 @@
-# Learn-IT
+<h1>Learn-IT</h1>
 <p>
-<img sr="https://user-images.githubusercontent.com/80088403/232288221-572008ba-6ac3-4b02-a446-5947fe3cea8b.png"/>
+ <img src = "https://user-images.githubusercontent.com/80088403/232305965-43f8c47d-eeeb-465c-85ae-01f6b40cfa11.png"/>
 </p>
 <p>
 <h1>Screenshots:</h1>
