@@ -1,11 +1,10 @@
 package com.hackbattle.learnit;
 
+import android.os.Bundle;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
-import android.os.Bundle;
-import android.widget.ImageView;
 
 import com.hackbattle.learnit.adapter.CourseAdapter;
 import com.hackbattle.learnit.model.Course;

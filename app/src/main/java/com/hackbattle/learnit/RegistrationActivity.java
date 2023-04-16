@@ -1,26 +1,21 @@
 package com.hackbattle.learnit;
 
+import android.content.Intent;
+import android.os.Bundle;
+import android.text.TextUtils;
+import android.view.View;
+import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.ProgressBar;
+import android.widget.Toast;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import java.util.*;
-
-import android.annotation.SuppressLint;
-import android.app.ProgressDialog;
-import android.media.Image;
-import android.util.Log;
-import android.widget.*;
-import android.content.*;
-import android.os.*;
-import android.view.*;
-import android.text.*;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
-import com.google.android.material.textfield.TextInputEditText;
-import com.google.firebase.FirebaseApp;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
 
 public class RegistrationActivity extends AppCompatActivity {
     private ProgressBar progressBar;
@@ -45,7 +40,7 @@ public class RegistrationActivity extends AppCompatActivity {
             public void onClick(View v) {
                 String emailText = email.getText().toString();
                 String passwordText = password.getText().toString();
-//
+
                 if (TextUtils.isEmpty(emailText)) {
                     Toast.makeText(getApplicationContext(), "Please enter email...", Toast.LENGTH_LONG).show();
                     return;
@@ -73,13 +68,10 @@ public class RegistrationActivity extends AppCompatActivity {
                         });
             }
         });
-        login.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(RegistrationActivity.this, LoginActivity.class);
-                Toast.makeText(RegistrationActivity.this, "Switching to Login...", Toast.LENGTH_SHORT).show();
-                startActivity(intent);
-            }
+        login.setOnClickListener(v -> {
+            Intent intent = new Intent(RegistrationActivity.this, LoginActivity.class);
+            Toast.makeText(RegistrationActivity.this, "Switching to Login...", Toast.LENGTH_SHORT).show();
+            startActivity(intent);
         });
     }
 
