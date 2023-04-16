@@ -1,4 +1,4 @@
-<h1>Learn-IT</h1>
+<h1 align='center'>Learn-IT</h1>
 <div>
 <p align='center'>
  <img src = "https://user-images.githubusercontent.com/80088403/232305965-43f8c47d-eeeb-465c-85ae-01f6b40cfa11.png"/ height = 200px width = 200px>
