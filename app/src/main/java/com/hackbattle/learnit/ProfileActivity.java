@@ -1,7 +1,5 @@
- package com.hackbattle.learnit;
-
+package com.hackbattle.learnit;
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.View;
@@ -16,12 +14,9 @@ import com.hackbattle.learnit.model.UpdateDialog;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
         button = (Button) findViewById(R.id.update);
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                UpdateDialog updateDialog = new UpdateDialog(ProfileActivity.this);
-                updateDialog.show();
-            }
+        button.setOnClickListener(v -> {
+            UpdateDialog updateDialog = new UpdateDialog(ProfileActivity.this);
+            updateDialog.show();
         });
     }
 
