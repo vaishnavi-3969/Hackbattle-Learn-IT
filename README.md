@@ -1,8 +1,11 @@
 <h1>Learn-IT</h1>
-<p>
- <img src = "https://user-images.githubusercontent.com/80088403/232305965-43f8c47d-eeeb-465c-85ae-01f6b40cfa11.png"/>
-</p>
-<p>
+<div>
+<p align='center'>
+ <img src = "https://user-images.githubusercontent.com/80088403/232305965-43f8c47d-eeeb-465c-85ae-01f6b40cfa11.png"/ height = 200px width = 200px>
+ </p>
+ </div>
+
+<div>
 <h1>Screenshots:</h1>
 <img src="https://user-images.githubusercontent.com/80088403/232290331-5d9909ac-5977-43f9-a1b9-daf8df2e915a.jpg" height=500px width = 200px/>
 <img src="https://user-images.githubusercontent.com/80088403/232290336-7076444d-bb6a-40f2-89ac-5ffa4dd1773f.jpg" height=500px width = 200px/>
@@ -15,13 +18,13 @@
 <img src = "https://user-images.githubusercontent.com/80088403/232290352-061119db-8b4a-457a-ae99-cb26736769fe.jpg" height=500px width = 200px/>
 <img src = "https://user-images.githubusercontent.com/80088403/232290353-ca1ad55f-1927-46f3-92b5-699a53c0b582.jpg" height=500px width = 200px/>
 <img src = "https://user-images.githubusercontent.com/80088403/232290356-cdc6b916-40b1-497e-843b-28b29a2e371f.jpg" height=500px width = 200px/>
-<img src = "https://user-images.githubusercontent.com/80088403/232290359-1ab22f5a-7a03-4219-a591-0bedebbedadf.jpg height=500px width = 200px/>
+<img src = "https://user-images.githubusercontent.com/80088403/232290359-1ab22f5a-7a03-4219-a591-0bedebbedadf.jpg" height=500px width = 200px/>
 <img src = "https://user-images.githubusercontent.com/80088403/232290362-f74aab0f-f4be-4e55-90c1-6bd94c968a3b.jpg" height=500px width = 200px/>
-</p>
-
-<p>
+</div>
+<br>
+<div>
 <h3>Final app downloadable on android: <a href = "https://github.com/vaishnavi-3969/Learn-IT/blob/master/app-debug.apk">APK File</a></h3>
 <h3><a href = " https://643bce05a8389c2b3be76bdc--monumental-cendol-86568d.netlify.app/">Website Link</a></h3>
 <h3><a href = "https://www.canva.com/design/DAFgQheSplc/EhY8ylPK2LBbWLN0yzBozA/view#3">PPT</h3>
 <h3><a href = "https://www.youtube.com/watch?v=0XYMJPxOStU&t=1s">Youtube Video</a></h3>
-</p>
+</div>
